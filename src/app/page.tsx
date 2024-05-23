@@ -1,16 +1,23 @@
 "use client";
 
 import { PropsWithChildren, useState } from "react";
-import { format, differenceInMilliseconds } from "date-fns";
+import { differenceInMilliseconds } from "date-fns";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen grid place-items-center">
+    <main className="min-h-screen flex flex-col gap-4 justify-center items-center">
       <div className="flex flex-col md:flex-row gap-16">
         <OnClickCounter />
         <OnMouseDownCounter />
         <OnMouseUpCounter />
       </div>
+      <Link
+        href="https://github.com/NWylynko/quick-click"
+        className="text-blue-300 underline"
+      >
+        Repo Here
+      </Link>
     </main>
   );
 }
